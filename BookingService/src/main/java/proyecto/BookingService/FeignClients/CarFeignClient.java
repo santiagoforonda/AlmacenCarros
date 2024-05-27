@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import proyecto.BookingService.Models.Car;
 
-@FeignClient(name = "booking-service", url ="http://localhost:8002")
-@RequestMapping("/booking")
+@FeignClient(name = "CarInventoryService")
+@RequestMapping("/car")
 public interface CarFeignClient {
     
     @PostMapping
