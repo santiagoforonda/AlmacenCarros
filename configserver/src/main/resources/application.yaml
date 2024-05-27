@@ -10,3 +10,11 @@ spring:
           search-paths: configdata
   application:
     name: Configserver
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      include:
+        show-details: always
