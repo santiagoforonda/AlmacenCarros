@@ -5,3 +5,11 @@ spring:
     config:
       enabled: true
       uri: http://localhost:8083
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+    health:
+      include:
+        show-details: always
