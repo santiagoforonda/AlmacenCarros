@@ -1,7 +1,6 @@
 package proyecto.PaymentService.Controllers;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

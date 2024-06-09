@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,11 +26,11 @@ public class Booking {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE) 
-    private UUID id;
+    private Long id;
 
-    private UUID carId;
+    private Long carId;
 
-    private UUID customerId;
+    private Long customerId;
 
     private Status status;
 

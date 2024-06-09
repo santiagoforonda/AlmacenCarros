@@ -7,7 +7,6 @@ import proyecto.BookingService.Models.Car;
 import proyecto.BookingService.Service.BookingService;
 
 import java.util.Optional;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/booking")
@@ -28,14 +27,14 @@ public class BookingController {
 
 
     @GetMapping("/{id}")
-    public Optional<ResponseEntity<Booking>> getBookingById(@PathVariable("id")UUID id){
+    public Optional<ResponseEntity<Booking>> getBookingById(@PathVariable("id") Long id){
         return bookingService.findById(id).map(bookingVerdadero -> ResponseEntity.ok().body(bookingVerdadero));
 
     }
 
     /*Metodo para guardar un carro desde el micro servicio de booking */
     @PostMapping("/carro/{bookingId}")
-    public ResponseEntity<Car> saveCar(@PathVariable("bookingId") UUID bookingId, @RequestBody Car carro){
+    public ResponseEntity<Car> saveCar(@PathVariable("bookingId") Long bookingId, @RequestBody Car carro){
         Car nuevoCarro = bookingService.saveCar(bookingId, carro);
         return ResponseEntity.ok(nuevoCarro);
     }

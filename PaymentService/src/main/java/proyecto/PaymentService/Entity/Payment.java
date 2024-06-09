@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,13 +26,13 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private UUID bookingId;
+    private Long bookingId;
 
     private String creditCard;
 
     private double amount;
 
-    private UUID transactionId;
+    private Long transactionId;
 
     private Status status;
 }

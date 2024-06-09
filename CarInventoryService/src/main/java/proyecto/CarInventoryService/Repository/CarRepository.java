@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 import proyecto.CarInventoryService.Entidades.Car;
 
 import java.util.List;
-import java.util.UUID;
 
 @Repository
 public interface CarRepository extends JpaRepository<Car, Long> {

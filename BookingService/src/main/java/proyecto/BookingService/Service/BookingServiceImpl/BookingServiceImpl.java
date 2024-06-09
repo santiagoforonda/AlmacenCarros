@@ -9,7 +9,6 @@ import proyecto.BookingService.Repository.BookingRepository;
 import proyecto.BookingService.Service.BookingService;
 
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class BookingServiceImpl implements BookingService {
@@ -36,12 +35,12 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public Optional<Booking> findById(UUID id) {
+    public Optional<Booking> findById(Long id) {
         return bookingRepository.findById(id);
     }
 
     @Override
-    public Car saveCar(UUID bookingId,Car carro) {
+    public Car saveCar(Long bookingId,Car carro) {
         carro.setBookingId(bookingId);
         Car nuevoCarro = carroFeign.save(carro); 
         return nuevoCarro;

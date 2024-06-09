@@ -2,7 +2,6 @@ package proyecto.BookingService.Models;
 
 
 
-import java.util.UUID;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,6 +20,6 @@ public class Car {
 
     private String available;
 
-    private UUID bookingId;
+    private Long bookingId;
     
 }

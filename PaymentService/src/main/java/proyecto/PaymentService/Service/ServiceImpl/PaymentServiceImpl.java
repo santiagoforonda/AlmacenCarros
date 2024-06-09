@@ -6,7 +6,6 @@ import proyecto.PaymentService.Repository.PaymentRepo;
 import proyecto.PaymentService.Service.PaymentService;
 
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class PaymentServiceImpl implements PaymentService {
