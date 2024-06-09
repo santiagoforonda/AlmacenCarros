@@ -7,6 +7,6 @@ import proyecto.PaymentService.Entity.Payment;
 import java.util.UUID;
 
 @Repository
-public interface PaymentRepo extends JpaRepository<Payment, UUID>{
+public interface PaymentRepo extends JpaRepository<Payment, Long>{
 
 }

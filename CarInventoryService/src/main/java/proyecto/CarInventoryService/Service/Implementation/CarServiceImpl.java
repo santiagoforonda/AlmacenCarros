@@ -7,7 +7,6 @@ import proyecto.CarInventoryService.Service.CarService;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class CarServiceImpl implements CarService {
@@ -34,7 +33,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public Optional<Car> findCarById(UUID id) {
+    public Optional<Car> findCarById(Long id) {
         return carRepository.findById(id);
     }
 }

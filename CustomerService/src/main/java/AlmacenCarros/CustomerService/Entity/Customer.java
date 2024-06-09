@@ -1,6 +1,5 @@
 package AlmacenCarros.CustomerService.Entity;
 
-import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,8 +23,8 @@ public class Customer {
     
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE) 
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String name;
 

@@ -7,7 +7,6 @@ import proyecto.CarInventoryService.Service.CarService;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/car")
@@ -36,7 +35,7 @@ public class CarControllers {
     }
 
     @GetMapping("/{id}")
-    public Optional<ResponseEntity<Car>> finCarById(@PathVariable("id")UUID id){
+    public Optional<ResponseEntity<Car>> finCarById(@PathVariable("id") Long id){
         return carService.findCarById(id).map(carVerdadero -> ResponseEntity.ok().body(carVerdadero));
     }
 

@@ -31,7 +31,7 @@ public class PaymentController {
     }
 
     @GetMapping("/{id}")
-    public Optional<ResponseEntity<Payment>> findById(@PathVariable("id") UUID id){
+    public Optional<ResponseEntity<Payment>> findById(@PathVariable("id") Long id){
         return paymentService.getPaymentById(id).map(pagoVerdadero -> ResponseEntity.ok().body(pagoVerdadero));
     }
 

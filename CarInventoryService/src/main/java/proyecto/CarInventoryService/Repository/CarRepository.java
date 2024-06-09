@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Repository
-public interface CarRepository extends JpaRepository<Car, UUID> {
+public interface CarRepository extends JpaRepository<Car, Long> {
 
 
     @Query("SELECT car FROM Car car WHERE car.disponibilidad = 'Disponible' ")

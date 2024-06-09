@@ -24,8 +24,8 @@ public class Payment {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE) 
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private UUID bookingId;
 

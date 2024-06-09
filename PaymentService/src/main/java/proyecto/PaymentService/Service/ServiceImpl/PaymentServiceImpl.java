@@ -31,7 +31,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-    public Optional<Payment> getPaymentById(UUID id) {
+    public Optional<Payment> getPaymentById(Long id) {
         return paymentRepo.findById(id);
     }
 }

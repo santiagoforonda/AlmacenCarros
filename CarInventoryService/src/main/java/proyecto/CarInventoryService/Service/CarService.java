@@ -10,6 +10,6 @@ public interface CarService {
 
     List<Car> listAvailableCars();
     Car createCar(Car car);
-    Optional<Car> findCarById(UUID id);
+    Optional<Car> findCarById(Long id);
 
 }

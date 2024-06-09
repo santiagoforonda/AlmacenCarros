@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,8 +22,8 @@ import javax.persistence.Table;
 public class Car {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE) 
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
 
     private String modelo;
